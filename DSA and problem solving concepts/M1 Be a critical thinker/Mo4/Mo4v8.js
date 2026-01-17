@@ -1,7 +1,7 @@
 // selectionsort
 
 const selectionSort = (array) => {
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length - 1; i++) {
     console.log("State of Array:", array);
 
     let minIndex = i;
@@ -13,14 +13,15 @@ const selectionSort = (array) => {
       console.log("Value", array[minIndex], "Index", minIndex);
     }
     if (minIndex !== i) {
-      let temp = array[i];
-      array[i] = array[minIndex];
-      array[minIndex] = temp;
+      //   let temp = array[i];
+      //   array[i] = array[minIndex];
+      //   array[minIndex] = temp;
+      [array[i], array[minIndex]] = [array[minIndex], array[i]];
+      console.log(`After pass${i + 1}`, array);
     }
-    console.log(`After pass${i + 1}`, array);
   }
 };
 
 selectionSort([5, 3, 8, 4, 2]);
 
-// console.log(selectionSort([5, 3, 8, 4, 2]));
+// console.log(selectionSort([5, 3, 8, 4, 2]))
