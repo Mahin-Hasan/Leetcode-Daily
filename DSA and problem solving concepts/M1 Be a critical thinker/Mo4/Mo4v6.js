@@ -19,4 +19,5 @@ const binarySearch = (arr, target) => {
   return -1;
 };
 
-console.log(binarySearch([3, 5, 6, 7, 9, 11], 7));
+// console.log(binarySearch([3, 5, 6, 7, 9, 11], 7));
+console.log(binarySearch([2, 4, 6, 8, 10, 12], 3));
